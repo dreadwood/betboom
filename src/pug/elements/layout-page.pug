@@ -1,0 +1,15 @@
+include /elements/head
+
+- let title = ""
+
+block data
+
+doctype html
+html(lang="ru")
+  +head({ title })
+  body.page-betboom
+    block background
+    main
+      block content
+    block modal
+    include /elements/script

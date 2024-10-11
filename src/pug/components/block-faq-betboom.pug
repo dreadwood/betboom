@@ -1,0 +1,10 @@
+include /components/accordion-betboom
+
+mixin block-faq-betboom({})
+  section.b-faq-betboom
+    .b-faq-betboom__wrp
+      h2.b-faq-betboom__title FAQ
+      .b-faq-betboom__list
+        +accordion-betboom({ title: "Как принять участие в премии?" })
+        +accordion-betboom({ title: "Какие критерии отбора проектов?" })
+        +accordion-betboom({ title: "Какие сроки рассмотрения заявок?" })

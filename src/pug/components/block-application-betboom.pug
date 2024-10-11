@@ -1,0 +1,68 @@
+include /components/form/form-field-betboom
+include /components/form/form-textarea-betboom
+include /components/form/form-field-group-betboom
+include /components/form/form-checkbox-betboom
+include /components/form/form-btn-betboom
+
+mixin block-application-betboom({})
+  section.b-application-betboom
+    .b-application-betboom__wrp
+      .b-application-betboom__suptitle Специальная номинация
+      h1.b-application-betboom__title БЛОГЕРСКИЙ #[span ИВЕНТ]
+      .b-application-betboom__text В этой категории отмечаются значимые проекты, которые благодаря эффективной интеграции блогеров в свою программу и стратегию продвижения привели большое внимание
+      form.b-application-betboom__form
+        .b-application-betboom__el
+          +form-field-betboom({
+            label: "Наименование компании*",
+            name: "company",
+            id: "betboomCompany",
+            isRequired: true,
+            placeholder: "Введите наименование"
+          })
+        .b-application-betboom__el
+          +form-field-betboom({
+            label: "Название проекта/кейс*",
+            name: "project",
+            id: "betboomProject",
+            isRequired: true,
+            placeholder: "Введите наименование"
+          })
+        .b-application-betboom__el
+          +form-textarea-betboom({
+            label: "Краткое описание проекта*",
+            name: "description",
+            id: "betboomDescription",
+            isRequired: true,
+            placeholder: "Напишите пару слов о проекте"
+          })
+        .b-application-betboom__el
+          +form-field-group-betboom({
+            label: "Презентация*",
+            name: "presentation",
+            id: "betboomPresentation",
+            isRequired: true,
+            placeholder: "Вставьте ссылку на презентацию",
+          })
+        .b-application-betboom__el
+          +form-field-betboom({
+            label: "Ссылка на видео",
+            name: "video",
+            id: "betboomVideo",
+            placeholder: "Вставьте ссылку на видео"
+          })
+        .b-application-betboom__el
+          +form-field-betboom({
+            label: "Контактные данные",
+            name: "contact",
+            id: "betboomContact",
+            placeholder: "Укажите данные для связи (Телефон, Email, Tg)"
+          })
+        .b-application-betboom__el
+          +form-checkbox-betboom({
+            text: "Нажимая на кнопку «Отправить заявку» вы даёте соглашение на <a href=\"#\">сбор и обработку персональных данных</a>",
+            name: "agree",
+            id: "betboomAgree",
+            isRequired: true
+          })
+        .b-application-betboom__submit
+          +form-btn-betboom({ text: "Подать заявку" })

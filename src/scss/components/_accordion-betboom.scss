@@ -1,0 +1,82 @@
+.accordion-betboom {
+  color: $color-white;
+  background-color: $color-gray-129;
+  border-radius: 6px;
+  &.show .accordion-betboom__icon {
+    &::after {
+      rotate: 180deg;
+      opacity: 0;
+    }
+    &::before {
+      rotate: 180deg;
+    }
+  }
+  &.show .accordion-betboom__body {
+    opacity: 1;
+  }
+}
+.accordion-betboom__btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  margin: 0;
+  padding: 14px 12px;
+  font-family: $font-default;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: left;
+  background-color: transparent;
+  border: 0;
+}
+.accordion-betboom__icon {
+  @include transition(rotate);
+  position: relative;
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  background-color: $color-gray-122;
+  border-radius: 4px;
+  &::before,
+  &::after {
+    @include transition(rotate, opacity);
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    background-color: $color-gray-window;
+    translate: -50% -50%;
+  }
+  &::before {
+    width: 12px;
+    height: 2px;
+  }
+  &::after {
+    width: 2px;
+    height: 12px;
+  }
+}
+.accordion-betboom__content {
+  @include transition(padding, height);
+  height: 0;
+  overflow: hidden;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  color: $color-pearl-blackberry;
+}
+.accordion-betboom__body {
+  @include transition(opacity);
+  padding-right: 12px;
+  padding-bottom: 12px;
+  padding-left: 12px;
+  opacity: 0;
+  p {
+    margin: 0;
+    &:not(:first-child) {
+      margin-top: 8px;
+    }
+  }
+}

@@ -1,0 +1,53 @@
+.b-application-betboom {
+  margin: 0 auto;
+  font-family: $font-default;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  text-align: center;
+  color: $color-white;
+  @include mobile {
+    padding: 0;
+  }
+}
+.b-application-betboom__wrp {
+  width: 100%;
+  max-width: 375px;
+  margin: 0 auto;
+  padding: 20px 20px 34px 20px;
+  background-color: $color-gray-071;
+  border-radius: 16px;
+  backdrop-filter: blur(8px);
+}
+.b-application-betboom__suptitle {
+  font-family: $font-additional;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+}
+.b-application-betboom__title {
+  margin-top: 12px;
+  margin-bottom: 0;
+  font-family: $font-title;
+  font-size: 48px;
+  line-height: 1;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  span {
+    color: $color-yellow-school-bus;
+  }
+}
+.b-application-betboom__text {
+  margin-top: 12px;
+}
+.b-application-betboom__form {
+  display: block;
+  margin-top: 24px;
+}
+.b-application-betboom__el {
+  margin-bottom: 12px;
+}
+.b-application-betboom__submit {
+  margin-top: 16px;
+}

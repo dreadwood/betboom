@@ -1,0 +1,27 @@
+.b-faq-betboom {
+  padding-top: 22px;
+  padding-bottom: 60px;
+}
+.b-faq-betboom__wrp {
+  width: 100%;
+  max-width: 375px;
+  margin: 0 auto;
+  padding: 20px 20px 30px 20px;
+  background-color: $color-gray-071;
+  border-radius: 16px;
+  backdrop-filter: blur(8px);
+}
+.b-faq-betboom__title {
+  margin: 0;
+  font-family: $font-title;
+  font-size: 48px;
+  line-height: 1;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+.b-faq-betboom__list {
+  display: grid;
+  gap: 12px;
+  margin-top: 24px;
+}

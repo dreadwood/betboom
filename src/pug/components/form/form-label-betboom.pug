@@ -1,0 +1,5 @@
+mixin form-label-betboom({ text, subtext, id, className })
+  label.f-label(for=id class=className)
+    span.f-label__text=text
+    if subtext
+      span.f-label__subtext=subtext

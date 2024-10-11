@@ -1,0 +1,51 @@
+.f-checkbox-betboom {
+  @include transition(color);
+  display: flex;
+  align-items: center;
+  column-gap: 11px;
+  font-family: $font-default;
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 300;
+  text-align: left;
+  color: transparentize($color-white, 0.6);
+  input:checked + .f-checkbox-betboom__icon {
+    background-color: $color-yellow-school-bus;
+    border-color: $color-yellow-school-bus;
+  }
+  input:checked + .f-checkbox-betboom__icon svg {
+    opacity: 1;
+  }
+  @include mobile {
+    column-gap: 10px;
+  }
+}
+.f-checkbox-betboom__icon {
+  @include transition(background-color, border);
+  display: grid;
+  flex-shrink: 0;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border: 1px solid $color-gray-window;
+  border-radius: 4px;
+  cursor: pointer;
+  svg {
+    @include transition(opacity);
+    display: block;
+    width: 16px;
+    height: 16px;
+    opacity: 0;
+    fill: $color-gray-004;
+  }
+}
+.f-checkbox-betboom__text {
+  a[href] {
+    @include transition(color);
+    text-decoration: underline;
+    &:hover,
+    &:focus-visible {
+      color: transparentize($color-white, 0.2);
+    }
+  }
+}

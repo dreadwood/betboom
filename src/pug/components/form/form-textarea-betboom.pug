@@ -1,0 +1,9 @@
+mixin form-textarea-betboom({ label, value, name, id, isRequired, placeholder, className })
+  .f-textarea-betboom(class=className)
+    label.f-textarea-betboom__label(for=id)=label
+    textarea.f-textarea-betboom__field(
+      id=id
+      name=name
+      required=isRequired
+      placeholder=placeholder
+    )=value

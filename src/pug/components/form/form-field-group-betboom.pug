@@ -1,0 +1,14 @@
+mixin form-field-group-betboom({ label, name, id, placeholder, isRequired })
+  .f-field-group-betboom.js-field-group
+    .f-field-group-betboom__el.js-field-group-example
+      label.f-field-group-betboom__label(for=id)=label
+      input.f-field-group-betboom__field(
+        type=(type || "text")
+        id=id
+        name=name
+        value=value
+        required=isRequired
+        placeholder=placeholder
+        class="js-field-group-field"
+      )
+      button.f-field-group-betboom__btn.js-field-group-btn(type="button")

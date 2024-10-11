@@ -1,0 +1,52 @@
+.yandex-captcha {
+  @include hide-scroll;
+  position: fixed;
+  z-index: 9;
+  display: none;
+  flex-direction: column;
+  padding: 10px;
+  overflow: scroll;
+  background-color: transparentize($color-black, 0.4);
+  inset: 0;
+  &.show {
+    display: flex;
+  }
+}
+.yandex-captcha__dialog {
+  position: relative;
+  width: max-content;
+  margin: auto;
+  padding-bottom: 44px + 20px;
+}
+.yandex-captcha__close {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  margin: 0;
+  padding: 0;
+  background-color: $color-bg-captcha;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.5s ease-in-out;
+  translate: -50% 0;
+  svg {
+    display: block;
+    width: 16px;
+    height: 16px;
+    fill: $color-black;
+  }
+  &:hover,
+  &:focus-visible {
+    background-color: $color-white;
+  }
+}
+.yandex-captcha__container {
+  width: max-content;
+  height: 100px;
+}

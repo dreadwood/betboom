@@ -1,0 +1,8 @@
+include /elements/images
+
+mixin block-hero-betboom({ title, titleMobile, subtitle, text, className })
+  .b-hero-betboom
+    a.b-hero-betboom__logo
+      +svg({ name: "logo", width: 114, height: 25 })
+    .b-hero-betboom__img
+      +picture({ image: "/img/hero-betboom.jpg" })

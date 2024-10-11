@@ -1,0 +1,49 @@
+.f-textarea-betboom {
+  @include transition(border-color);
+  height: 80px;
+  padding: 5px 11px;
+  font-family: $font-default;
+  background-color: $color-gray-129;
+  border: 1px solid $color-gray-129;
+  border-radius: 6px;
+  &:hover {
+    border-color: $color-anthracite;
+  }
+  &:focus-within {
+    border-color: $color-pearl-blackberry;
+  }
+}
+.f-textarea-betboom__label {
+  display: block;
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  text-align: left;
+  color: $color-gray-800;
+}
+.f-textarea-betboom__field {
+  @include hide-scroll;
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  text-align: left;
+  color: $color-white;
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  appearance: none;
+  resize: none;
+  &::placeholder {
+    font: inherit;
+    color: $color-pearl-blackberry;
+  }
+  @include mobile {
+    font-size: 16px;
+  }
+}

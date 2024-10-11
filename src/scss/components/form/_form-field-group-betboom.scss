@@ -1,0 +1,114 @@
+.f-field-group-betboom {
+  display: grid;
+  gap: 12px;
+}
+.f-field-group-betboom__el {
+  @include transition(border-color);
+  position: relative;
+  padding: 5px 39px 5px 11px;
+  background-color: $color-gray-129;
+  border: 1px solid $color-gray-129;
+  border-radius: 6px;
+  &:hover {
+    border-color: $color-anthracite;
+  }
+  &:focus-within {
+    border-color: $color-pearl-blackberry;
+  }
+}
+.f-field-group-betboom__label {
+  display: block;
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  text-align: left;
+  color: $color-gray-800;
+}
+.f-field-group-betboom__field {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  text-align: left;
+  color: $color-white;
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  appearance: none;
+  &::placeholder {
+    font: inherit;
+    color: $color-pearl-blackberry;
+  }
+  &::-webkit-credentials-auto-fill-button {
+    // for hidden key icon in safari
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+  }
+  &[type="number"]::-webkit-outer-spin-button, // webkit
+  &[type="number"]::-webkit-inner-spin-button {
+    margin: 0;
+    appearance: none;
+  }
+  &[type="number"] {
+    // firefox
+    appearance: textfield;
+  }
+  @include mobile {
+    font-size: 16px;
+  }
+}
+.f-field-group-betboom__btn {
+  position: absolute;
+  top: 50%;
+  right: 6px;
+  display: block;
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  margin: 0;
+  padding: 0;
+  background-color: $color-gray-122;
+  border: 0;
+  border-radius: 4px;
+  translate: 0 -50%;
+  &::before,
+  &::after {
+    @include transition(background-color);
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    background-color: $color-gray-window;
+    translate: -50% -50%;
+  }
+  &::before {
+    width: 12px;
+    height: 2px;
+  }
+  &::after {
+    width: 2px;
+    height: 12px;
+  }
+  &.minus {
+    &::after {
+      content: none;
+    }
+  }
+  &:hover,
+  &:focus-visible {
+    &::before,
+    &::after {
+      background-color: $color-gray-800;
+    }
+  }
+}

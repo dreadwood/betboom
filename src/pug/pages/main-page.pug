@@ -1,0 +1,21 @@
+extends /elements/layout-page
+include /components/block-backgroung-betboom
+include /components/block-hero-betboom
+include /components/block-application-betboom
+include /components/block-faq-betboom
+//- include /components/yandex-captcha
+
+
+block data
+  - title = "Блогерский ивент: специальная номинация"
+
+block background
+  +block-backgroung-betboom({})
+
+block content
+  +block-hero-betboom({})
+  +block-application-betboom({})
+  +block-faq-betboom({})
+
+block modal
+  //- +yandex-captcha({})

@@ -1,0 +1,12 @@
+mixin form-field-betboom({ label, value, name, type, id, isRequired, placeholder, className })
+  .f-field-betboom(class=className)
+    label.f-field-betboom__label(for=id)=label
+    input.f-field-betboom__field(
+      type=(type || "text")
+      id=id
+      name=name
+      value=value
+      required=isRequired
+      placeholder=placeholder
+    )
+

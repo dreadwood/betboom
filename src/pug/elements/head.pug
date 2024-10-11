@@ -1,0 +1,16 @@
+mixin head({ title })
+  head
+    meta(name="robots" content="noindex, nofollow")
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+
+    title=title
+
+    link(rel="icon" href="/favicon/favicon.svg" type="image/svg+xml")
+    link(rel="icon" href="/favicon/favicon.png" type="image/png")
+    link(rel="icon" href="/favicon.ico")
+
+    //- script(src="https://smartcaptcha.yandexcloud.net/captcha.js?render=onload&onload=onSmartCaptchaReady" defer)
+    script(src="https://yastatic.net/share2/share.js")
+
+    link(rel="stylesheet" href="/css/style.css")
