@@ -49,6 +49,44 @@ window.utils = {
 })()
 
 /**
+ * block-application.js
+ */
+;(() => {
+  /** @type {NodeListOf<HTMLInputElement>} */
+  const fieldRequired = document.querySelectorAll('.js-field-required')
+
+  /** @type {HTMLButtonElement | null} */
+  const submitBtn = document.querySelector('.js-submit-btn')
+
+  fieldRequired.forEach((it) => {
+    it.addEventListener('input', () =>
+      it.parentElement.classList.remove('error')
+    )
+
+    it.addEventListener('blur', () => {
+      if (it.value.length === 0) {
+        it.parentElement.classList.add('error')
+      }
+    })
+  })
+
+  submitBtn.addEventListener('click', (evt) => {
+    fieldRequired.forEach((it) => {
+      if (
+        (it.tagName === 'INPUT' &&
+          it.type !== 'checkbox' &&
+          it.value.length === 0) ||
+        (it.tagName === 'INPUT' && it.type === 'checkbox' && !it.checked) ||
+        (it.tagName === 'TEXTAREA' && it.value.length === 0)
+      ) {
+        it.parentElement.classList.add('error')
+        evt.preventDefault()
+      }
+    })
+  })
+})()
+
+/**
  * form-field-group.js
  */
 ;(() => {
@@ -79,6 +117,9 @@ window.utils = {
     /** @type {HTMLInputElement | null} */
     const field = copy.querySelector('.js-field-group-field')
 
+    /** @type {HTMLLabelElement | null} */
+    const label = copy.querySelector('.js-field-group-label')
+
     /** @type {HTMLInputElement | null} */
     const btnField = copy.querySelector('.js-field-group-btn')
 
@@ -86,9 +127,10 @@ window.utils = {
       return
     }
 
-    const num = container.children.length + 1
+    label.textContent = label.textContent.replace(/\*/g, '')
 
     field.value = ''
+    field.classList.remove('js-field-required')
     field.removeAttribute('id')
     field.removeAttribute('required')
 
@@ -97,4 +139,22 @@ window.utils = {
 
     container.appendChild(copy)
   }
+})()
+
+/**
+ * form-field-link.js
+ */
+;(() => {
+  const urlPattern = /^(https?:\/\/)?([a-zA-Z0-9.-]+)(\.[a-zA-Z]{2,})?(\/.*)?$/
+
+  /** @type {NodeListOf<HTMLInputElement>} */
+  const fieldsLink = document.querySelectorAll('.js-field-link')
+
+  fieldsLink.forEach((it) => {
+    it.addEventListener('input', () => {
+      if (!urlPattern.test(it.value)) {
+        it.value = it.value.slice(0, -1)
+      }
+    })
+  })
 })()

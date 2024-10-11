@@ -39,34 +39,38 @@
             <div class="b-application-betboom__el">
               <div class="f-field-betboom">
                 <label class="f-field-betboom__label" for="betboomCompany">Наименование компании*</label>
-                <input class="f-field-betboom__field" type="text" id="betboomCompany" name="company" required="required" placeholder="Введите наименование"/>
+                <input class="f-field-betboom__field js-field-required" type="text" id="betboomCompany" name="company" placeholder="Введите наименование"/>
               </div>
+              <div class="f-field-betboom__error">Заполните поле</div>
             </div>
             <div class="b-application-betboom__el">
               <div class="f-field-betboom">
-                <label class="f-field-betboom__label" for="betboomProject">Название кейса*</label>
-                <input class="f-field-betboom__field" type="text" id="betboomProject" name="project" required="required" placeholder="Введите наименование"/>
+                <label class="f-field-betboom__label" for="betboomProject">Наименование проекта/кейс(а)*</label>
+                <input class="f-field-betboom__field js-field-required" type="text" id="betboomProject" name="project" placeholder="Введите наименование"/>
               </div>
+              <div class="f-field-betboom__error">Заполните поле</div>
             </div>
             <div class="b-application-betboom__el">
               <div class="f-textarea-betboom">
                 <label class="f-textarea-betboom__label" for="betboomDescription">Краткое описание проекта*</label>
-                <textarea class="f-textarea-betboom__field" id="betboomDescription" name="description" required="required" placeholder="Напишите пару слов о проекте"></textarea>
+                <textarea class="f-textarea-betboom__field js-field-required" id="betboomDescription" name="description" placeholder="Напишите пару слов о проекте"></textarea>
               </div>
+              <div class="f-textarea-betboom__error">Заполните поле</div>
             </div>
             <div class="b-application-betboom__el">
               <div class="f-field-group-betboom js-field-group">
                 <div class="f-field-group-betboom__el js-field-group-example">
-                  <label class="f-field-group-betboom__label" for="betboomPresentation">Презентация*</label>
-                  <input class="f-field-group-betboom__field js-field-group-field" type="text" id="betboomPresentation" name="presentation" required="required" placeholder="Вставьте ссылку на презентацию"/>
+                  <label class="f-field-group-betboom__label js-field-group-label" for="betboomPresentation">Презентация*</label>
+                  <input class="f-field-group-betboom__field js-field-group-field js-field-required js-field-link" type="text" id="betboomPresentation" name="presentation" placeholder="Вставьте ссылку на презентацию"/>
                   <button class="f-field-group-betboom__btn js-field-group-btn" type="button"></button>
+                  <div class="f-field-betboom__error">Заполните поле</div>
                 </div>
               </div>
             </div>
             <div class="b-application-betboom__el">
               <div class="f-field-betboom">
                 <label class="f-field-betboom__label" for="betboomVideo">Ссылка на видео</label>
-                <input class="f-field-betboom__field" type="text" id="betboomVideo" name="video" placeholder="Вставьте ссылку на видео"/>
+                <input class="f-field-betboom__field js-field-link" type="text" id="betboomVideo" name="video" placeholder="Вставьте ссылку на видео"/>
               </div>
             </div>
             <div class="b-application-betboom__el">
@@ -77,7 +81,7 @@
             </div>
             <div class="b-application-betboom__el">
               <div class="f-checkbox-betboom">
-                <input class="visually-hidden" type="checkbox" id="betboomAgree" name="agree" required="required"/>
+                <input class="visually-hidden js-field-required" type="checkbox" id="betboomAgree" name="agree"/>
                 <label class="f-checkbox-betboom__icon" for="betboomAgree">
                   <svg width="16" height="16">
                     <use xlink:href="img/sprite.svg#icon-check"></use>
@@ -87,7 +91,7 @@
               </div>
             </div>
             <div class="b-application-betboom__submit">
-              <button class="f-btn-betboom" type="submit"><span>Подать заявку</span></button>
+              <button class="f-btn-betboom js-submit-btn" type="submit"><span>Подать заявку</span></button>
             </div>
           </form>
         </div>

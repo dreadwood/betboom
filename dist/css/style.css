@@ -171,6 +171,9 @@ input[type=file].visually-hidden {
 .f-checkbox-betboom input:checked + .f-checkbox-betboom__icon svg {
   opacity: 1;
 }
+.f-checkbox-betboom.error .f-checkbox-betboom__icon {
+  border-color: #ff0025;
+}
 @media (max-width: 767px) {
   .f-checkbox-betboom {
     -moz-column-gap: 10px;
@@ -232,6 +235,12 @@ input[type=file].visually-hidden {
 }
 .f-field-group-betboom__el:focus-within {
   border-color: #71717a;
+}
+.f-field-group-betboom__el.error {
+  border-bottom-color: #ff0025;
+}
+.f-field-group-betboom__el.error + .f-field-betboom__error {
+  display: block;
 }
 
 .f-field-group-betboom__label {
@@ -336,6 +345,15 @@ input[type=file].visually-hidden {
   background-color: #cccccc;
 }
 
+.f-field-betboom__error {
+  display: none;
+  padding: 4px 12px 0 12px;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: left;
+  color: #ff0025;
+}
+
 .f-field-betboom {
   transition-timing-function: ease-in-out;
   transition-duration: 0.3s;
@@ -351,6 +369,12 @@ input[type=file].visually-hidden {
 }
 .f-field-betboom:focus-within {
   border-color: #71717a;
+}
+.f-field-betboom.error {
+  border-bottom-color: #ff0025;
+}
+.f-field-betboom.error + .f-field-betboom__error {
+  display: block;
 }
 
 .f-field-betboom__label {
@@ -413,6 +437,15 @@ input[type=file].visually-hidden {
   }
 }
 
+.f-field-betboom__error {
+  display: none;
+  padding: 4px 12px 0 12px;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: left;
+  color: #ff0025;
+}
+
 .f-textarea-betboom {
   transition-timing-function: ease-in-out;
   transition-duration: 0.3s;
@@ -429,6 +462,12 @@ input[type=file].visually-hidden {
 }
 .f-textarea-betboom:focus-within {
   border-color: #71717a;
+}
+.f-textarea-betboom.error {
+  border-bottom-color: #ff0025;
+}
+.f-textarea-betboom.error + .f-textarea-betboom__error {
+  display: block;
 }
 
 .f-textarea-betboom__label {
@@ -476,6 +515,15 @@ input[type=file].visually-hidden {
   .f-textarea-betboom__field {
     font-size: 16px;
   }
+}
+
+.f-textarea-betboom__error {
+  display: none;
+  padding: 4px 12px 0 12px;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: left;
+  color: #ff0025;
 }
 
 .accordion-betboom {
