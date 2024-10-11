@@ -16,6 +16,9 @@
   input:checked + .f-checkbox-betboom__icon svg {
     opacity: 1;
   }
+  &.error .f-checkbox-betboom__icon {
+    border-color: $color-carmine-red;
+  }
   @include mobile {
     column-gap: 10px;
   }

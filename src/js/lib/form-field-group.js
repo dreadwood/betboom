@@ -29,6 +29,9 @@
     /** @type {HTMLInputElement | null} */
     const field = copy.querySelector('.js-field-group-field')
 
+    /** @type {HTMLLabelElement | null} */
+    const label = copy.querySelector('.js-field-group-label')
+
     /** @type {HTMLInputElement | null} */
     const btnField = copy.querySelector('.js-field-group-btn')
 
@@ -36,9 +39,10 @@
       return
     }
 
-    const num = container.children.length + 1
+    label.textContent = label.textContent.replace(/\*/g, '')
 
     field.value = ''
+    field.classList.remove('js-field-required')
     field.removeAttribute('id')
     field.removeAttribute('required')
 

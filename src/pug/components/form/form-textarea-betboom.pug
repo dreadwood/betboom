@@ -4,6 +4,8 @@ mixin form-textarea-betboom({ label, value, name, id, isRequired, placeholder, c
     textarea.f-textarea-betboom__field(
       id=id
       name=name
-      required=isRequired
       placeholder=placeholder
+      class=isRequired && "js-field-required"
     )=value
+  if isRequired
+    .f-textarea-betboom__error Заполните поле

@@ -15,6 +15,12 @@
   &:focus-within {
     border-color: $color-pearl-blackberry;
   }
+  &.error {
+    border-bottom-color: $color-carmine-red;
+    & + .f-field-betboom__error {
+      display: block;
+    }
+  }
 }
 .f-field-group-betboom__label {
   display: block;
@@ -111,4 +117,12 @@
       background-color: $color-gray-800;
     }
   }
+}
+.f-field-betboom__error {
+  display: none;
+  padding: 4px 12px 0 12px;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: left;
+  color: $color-carmine-red;
 }

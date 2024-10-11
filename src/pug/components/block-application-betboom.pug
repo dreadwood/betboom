@@ -21,7 +21,7 @@ mixin block-application-betboom({})
           })
         .b-application-betboom__el
           +form-field-betboom({
-            label: "Название кейса*",
+            label: "Наименование проекта/кейс(а)*",
             name: "project",
             id: "betboomProject",
             isRequired: true,
@@ -42,13 +42,15 @@ mixin block-application-betboom({})
             id: "betboomPresentation",
             isRequired: true,
             placeholder: "Вставьте ссылку на презентацию",
+            inputClassName: "js-field-link"
           })
         .b-application-betboom__el
           +form-field-betboom({
             label: "Ссылка на видео",
             name: "video",
             id: "betboomVideo",
-            placeholder: "Вставьте ссылку на видео"
+            placeholder: "Вставьте ссылку на видео",
+            inputClassName: "js-field-link"
           })
         .b-application-betboom__el
           +form-field-betboom({
@@ -65,4 +67,4 @@ mixin block-application-betboom({})
             isRequired: true
           })
         .b-application-betboom__submit
-          +form-btn-betboom({ text: "Подать заявку" })
+          +form-btn-betboom({ text: "Подать заявку", className: "js-submit-btn" })

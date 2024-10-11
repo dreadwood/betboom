@@ -2,7 +2,7 @@ include /elements/images
 
 mixin form-checkbox-betboom({ text, name, id, isRequired, className })
   .f-checkbox-betboom(class=className)
-    input.visually-hidden(type="checkbox" id=id name=name required=isRequired)
+    input.visually-hidden(type="checkbox" id=id name=name class=isRequired && "js-field-required")
     label.f-checkbox-betboom__icon(for=id)
       +svg({ name: "icon-check", width: 16, height: 16 })
     .f-checkbox-betboom__text !{text}
