@@ -1,0 +1,9 @@
+include /elements/images
+
+mixin yandex-captcha({})
+  .yandex-captcha.js-captcha
+    .yandex-captcha__dialog
+      button.yandex-captcha__close.js-captcha-close(type="button" aria-label="Закрыть" )
+        +svg({ name: "cross", width: 28, height: 28 })
+      .yandex-captcha__container.js-captcha-container
+
