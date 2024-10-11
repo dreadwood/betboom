@@ -2,8 +2,6 @@
 dist-ssr
 dist.zip
 *.local
-dist/
-_apx.scss
 
 # generated types
 .astro/
