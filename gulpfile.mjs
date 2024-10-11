@@ -152,7 +152,7 @@ const common = gulp.series(
   copy,
   css,
   jsLib,
-  jsVendor,
+  // jsVendor,
   sprite,
   // images,
   html
